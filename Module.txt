@@ -1,0 +1,12 @@
+Name: WeatherDotCom
+AntiForgery: enabled
+Author: Jason N. Gaylord
+Website: http://jasongaylord.com
+Version: 0.5
+OrchardVersion: 1.0
+Description: This module will display the current weather from weather.com.
+Features:
+    WeatherDotCom:
+        Description: This module will display the current weather from weather.com. Version 0.5 built 5.25.2011
+		Category: Widget
+        Dependencies: Orchard.Widgets

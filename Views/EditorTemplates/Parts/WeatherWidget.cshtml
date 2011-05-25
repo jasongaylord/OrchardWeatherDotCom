@@ -1,0 +1,61 @@
+﻿@using WeatherDotCom.Models
+@model WeatherPart
+
+<fieldset>
+  <legend>Weather Channel Properties</legend>
+  
+  <p>
+    At this time, only the current conditions are supported. The URL field below should only be changed if the Weather Channel XML URL changes. The URL that is used has three placeholders. The first 
+    is the search term. The query string contains three parameters and values. Two of these are placeholders for our widget. The first query string parameter is to specify current conditions. The 
+    next is to pass in the Partner ID for the user. The last is to pass in the License Key for the user.<br /><br />
+    
+    To sign up for the Weather Channel service, visit the 
+    <a href="http://www.weather.com/services/xmloap.html" target="_blank" style="color: #999999;">Weather Channel registration</a> page.
+  </p><br />
+
+  <div class="editor-label">
+    <label for="WebServiceUrl">@T("Service URL")</label>
+    <span style="color: #666666; font-size: 0.9em;">For example: http://xoap.weather.com/weather/local/{0}?cc=*&par={1}&key={2}</span>
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.WebServiceUrl)
+    @Html.ValidationMessageFor(model => model.WebServiceUrl)
+  </div><br />
+            
+  <div class="editor-label">
+    <label for="SearchString">@T("Search String")</label>
+    <span style="color: #666666; font-size: 0.9em;">For example: Use a zip code such as '18702'</span>
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.SearchString)
+    @Html.ValidationMessageFor(model => model.SearchString)
+  </div><br />
+
+  <div class="editor-label">
+    <label for="PartnerId">@T("Partner ID")</label>
+    <span style="color: #666666; font-size: 0.9em;">This is obtained from the <a href="http://www.weather.com/services/xmloap.html" target="_blank" style="color: #999999;">Weather Channel registration</a>.</span>
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.PartnerId)
+    @Html.ValidationMessageFor(model => model.PartnerId)
+  </div><br />
+
+  <div class="editor-label">
+    <label for="LicenseKey">@T("License Key")</label>
+    <span style="color: #666666; font-size: 0.9em;">This is obtained from the <a href="http://www.weather.com/services/xmloap.html" target="_blank" style="color: #999999;">Weather Channel registration</a>.</span>
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.LicenseKey)
+    @Html.ValidationMessageFor(model => model.LicenseKey)
+  </div><br />
+
+  <div class="editor-label">
+    <label for="MinutesToCache">@T("Cache Time (in minutes)")</label>
+    <span style="color: #666666; font-size: 0.9em;">For example: 15 minutes. This is the number of minutes to save the weather results before connecting to the service again.</span>
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(model => model.MinutesToCache)
+    @Html.ValidationMessageFor(model => model.MinutesToCache)
+  </div><br />
+            
+</fieldset>

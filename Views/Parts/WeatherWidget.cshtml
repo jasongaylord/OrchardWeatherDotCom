@@ -1,0 +1,7 @@
+﻿<div id="WeatherDotCom">
+    <h3>@Model.WeatherResults.CurrentConditions.Temperature&deg;F</h3>
+    @Model.WeatherResults.CurrentConditions.Description<br />
+    Feels Like: @Model.WeatherResults.CurrentConditions.FeelsLike&deg;<br />
+    Wind: From @Model.WeatherResults.CurrentConditions.WindDirection at @Model.CurrentConditions.WindSpeed mph<br />
+    <span style="font-size: 0.8em; color: #999999;">As of @Model.WeatherResults.TimeCached UTC</span>
+</div>
